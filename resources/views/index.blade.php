@@ -16,7 +16,7 @@
                         <p>{{ $course->description }}</p>
                     </div>
                     <div class="ratings">
-                        <p>Progress: {{ Auth::user()->lessons()->where('course_id', $course->id)->count() }}
+                        <p>Прогресс: {{ Auth::user()->lessons()->where('course_id', $course->id)->count() }}
                             of {{ $course->lessons->count() }} lessons</p>
                     </div>
                 </div>
@@ -46,7 +46,7 @@
                     <p>{{ $course->description }}</p>
                 </div>
                 <div class="ratings">
-                    <p class="pull-right">Students: {{ $course->students()->count() }}</p>
+                    <p class="pull-right">Кол-во студентов: {{ $course->students()->count() }}</p>
                     <p>
                         @for ($star = 1; $star <= 5; $star++)
                             @if ($course->rating >= $star)

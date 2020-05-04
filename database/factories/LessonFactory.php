@@ -18,7 +18,7 @@ $factory->define(App\Lesson::class, function (Faker\Generator $faker) {
         'title' => $name,
         'slug' => str_slug($name),
         'short_text' => $faker->paragraph(),
-        'full_text' => $faker->text(1000),
+        'full_text' => $faker->text(250000000),
         'position' => rand(1, 10),
         'free_lesson' => rand(0, 1),
         'published' => rand(0, 1),

@@ -69,8 +69,9 @@
                             {{ csrf_field() }}
                             <input type="email" name="email" placeholder="Email" />
                             <input type="password" name="password" placeholder="Password" />
-                            <input type="submit" value="Login" class="btn btn-info">
+                            <input type="submit" value="Войти" class="btn btn-info">
                         </form>
+                        <a href="{{ route('auth.register') }}" class="btn btn-info">Регистрация</a>
                     @endif
                 </div>
             </div>

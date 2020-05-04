@@ -7,16 +7,16 @@
     @if ($purchased_course)
         Rating: {{ $course->rating }} / 5
         <br />
-        <b>Rate the course:</b>
+        <b>Оцените курс:</b>
         <br />
         <form action="{{ route('courses.rating', [$course->id]) }}" method="post">
             {{ csrf_field() }}
             <select name="rating">
-                <option value="1">1 - Awful</option>
-                <option value="2">2 - Not too good</option>
-                <option value="3">3 - Average</option>
-                <option value="4" selected>4 - Quite good</option>
-                <option value="5">5 - Awesome!</option>
+                <option value="1">1 - Ужасно</option>
+                <option value="2">2 - Не очень</option>
+                <option value="3">3 - Сойдет</option>
+                <option value="4" selected>4 - Хорошо</option>
+                <option value="5">5 - Отлично!</option>
             </select>
             <input type="submit" value="Rate" />
         </form>
@@ -37,7 +37,7 @@
             @endif
         @else
             <a href="{{ route('auth.register') }}?redirect_url={{ route('courses.show', [$course->slug]) }}"
-               class="btn btn-primary">Начать курс ({{ $course->price }})</a>
+               class="btn btn-primary">Начать курс</a>
         @endif
     </p>
    <!-- -->
