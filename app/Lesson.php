@@ -15,7 +15,7 @@ use Spatie\MediaLibrary\HasMedia\Interfaces\HasMedia;
  * @property string $slug
  * @property string $lesson_image
  * @property text $short_text
- * @property text $full_text
+ * @property longText $full_text
  * @property integer $position
  * @property string $downloadable_files
  * @property tinyInteger $free_lesson
