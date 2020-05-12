@@ -166,3 +166,4 @@ footer {
     background-color: #e2e2e2;
 }
 
+.list-group-item:hover{background-color:#008ED9; color: white; }

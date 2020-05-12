@@ -10,7 +10,11 @@
             <div class="col-sm-4 col-lg-4 col-md-4">
 
                 <div class="thumbnail thumbnail-active">
-                    <img src="http://placehold.it/320x180" alt="">
+                    @if ($course->course_image)
+                        <img src="{{ asset('uploads/'.$course->course_image) }}">
+                    @else
+                        <img src="http://placehold.it/320x180" alt="">
+                    @endif
                     <div class="caption">
                         <h4><a href="{{ route('courses.show', [$course->slug]) }}">{{ $course->title }}</a>
                         </h4>

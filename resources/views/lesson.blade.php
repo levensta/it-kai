@@ -6,7 +6,7 @@
     <div class="list-group">
         @foreach ($lesson->course->publishedLessons as $list_lesson)
             <a href="{{ route('lessons.show', [$list_lesson->course_id, $list_lesson->slug]) }}" class="list-group-item"
-                @if ($list_lesson->id == $lesson->id) style="font-weight: bold" @endif>{{ $loop->iteration }}. {{ $list_lesson->title }}</a>
+                @if ($list_lesson->id == $lesson->id) style="font-weight: bold; color: white; border-color: #294d9a; background-color: #008ED9;" @endif>{{ $loop->iteration }}. {{ $list_lesson->title }}</a>
         @endforeach
     </div>
 @endsection
