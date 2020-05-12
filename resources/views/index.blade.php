@@ -4,11 +4,12 @@
 
     @if (!is_null($purchased_courses))
         <h3>Мои курсы</h3>
-        <div class="row">
 
+        <div class="row">
         @foreach($purchased_courses as $course)
             <div class="col-sm-4 col-lg-4 col-md-4">
-                <div class="thumbnail">
+
+                <div class="thumbnail thumbnail-active">
                     <img src="http://placehold.it/320x180" alt="">
                     <div class="caption">
                         <h4><a href="{{ route('courses.show', [$course->slug]) }}">{{ $course->title }}</a>
@@ -17,7 +18,7 @@
                     </div>
                     <div class="ratings">
                         <p>Прогресс: {{ Auth::user()->lessons()->where('course_id', $course->id)->count() }}
-                            of {{ $course->lessons->count() }} lessons</p>
+                            из {{ $course->lessons->count() }} уроков</p>
                     </div>
                 </div>
             </div>
@@ -39,7 +40,7 @@
                 @endif
                 <div class="caption">
                     @if ($course->price)
-                        <h4 class="pull-right">${{ $course->price }} &#8381;</h4>
+                        <h4 class="pull-right">{{ $course->price }} &#8381;</h4>
                     @endif
                     <h4><a href="{{ route('courses.show', [$course->slug]) }}">{{ $course->title }}</a>
                     </h4>

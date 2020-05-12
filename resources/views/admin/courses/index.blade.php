@@ -16,7 +16,7 @@
             <li><a href="{{ route('admin.courses.index') }}?show_deleted=1" style="{{ request('show_deleted') == 1 ? 'font-weight: 700' : '' }}">Удаленные</a></li>
         </ul>
     </p>
-    
+
 
     <div class="panel panel-default">
         <div class="panel-heading">

@@ -63,9 +63,7 @@
 
                         <div class="form-group">
                             <div class="col-md-6 col-md-offset-4">
-                                <button type="submit" class="btn btn-primary">
-                                    Зарегистрироваться
-                                </button>
+                                <button type="submit" class="btn btn-primary btn-reg" style="float: right">Зарегистрироваться</button>
                                 <a href="{{ route('auth.login') }}">Уже зарегистрированы? Авторизуйтесь здесь</a>
                             </div>
                         </div>

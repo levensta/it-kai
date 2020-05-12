@@ -65,8 +65,35 @@ $(document).ready(function () {
                 }
             },
             'colvis'
-        ]
+        ],
+        language: {
+            "info": "Показано _START_ - _END_ из _TOTAL_ записей",
+            "lengthMenu": 'Показать <select>'+
+                            '<option value="10">10</option>'+
+                            '<option value="20">20</option>'+
+                            '<option value="30">30</option>'+
+                            '<option value="40">40</option>'+
+                            '<option value="50">50</option>'+
+                            '<option value="-1">Все</option>'+
+                            '</select> записей',
+            "search": 'Поиск:',
+            "zeroRecords": 'Не найдено подходящих записей',
+            "paginate": {
+                "previous": "Назад",
+                "next": "Вперед",
+            }
+        }
     };
+
+    /*          translation of buttons into Russian
+
+    let copyButtonTrans = '{{ trans('global.datatables.copy') }}' // Translations in JavaScript
+    let csvButtonTrans = '{{ trans('global.datatables.csv') }}'
+    let excelButtonTrans = '{{ trans('global.datatables.excel') }}'
+    let pdfButtonTrans = '{{ trans('global.datatables.pdf') }}'
+    let printButtonTrans = '{{ trans('global.datatables.print') }}'
+    let colvisButtonTrans = '{{ trans('global.datatables.colvis') }}'        */
+
     $('.datatable').each(function () {
         if ($(this).hasClass('dt-select')) {
             window.dtDefaultOptions.select = {
@@ -83,11 +110,11 @@ $(document).ready(function () {
         $(this).dataTable(window.dtDefaultOptions);
     });
     if (typeof window.route_mass_crud_entries_destroy != 'undefined') {
-        $('.datatable, .ajaxTable').siblings('.actions').html('<a href="' + window.route_mass_crud_entries_destroy + '" class="btn btn-xs btn-danger js-delete-selected" style="margin-top:0.755em;margin-left: 20px;">Delete selected</a>');
+        $('.datatable, .ajaxTable').siblings('.actions').html('<a href="' + window.route_mass_crud_entries_destroy + '" class="btn btn-xs btn-danger js-delete-selected" style="margin-top:0.755em;margin-left: 20px;">Удалить выбранные</a>');
     }
 
     $(document).on('click', '.js-delete-selected', function () {
-        if (confirm('Are you sure')) {
+        if (confirm('Вы уверены?')) {
             var ids = [];
 
             $(this).closest('.actions').siblings('.datatable, .ajaxTable').find('tbody tr.selected').each(function () {
@@ -217,7 +244,7 @@ function processAjaxTables() {
         }
         $(this).DataTable(window.dtDefaultOptions);
         if (typeof window.route_mass_crud_entries_destroy != 'undefined') {
-            $(this).siblings('.actions').html('<a href="' + window.route_mass_crud_entries_destroy + '" class="btn btn-xs btn-danger js-delete-selected" style="margin-top:0.755em;margin-left: 20px;">Delete selected</a>');
+            $(this).siblings('.actions').html('<a href="' + window.route_mass_crud_entries_destroy + '" class="btn btn-xs btn-danger js-delete-selected" style="margin-top:0.755em;margin-left: 20px;">Удалить выбранные</a>');
         }
     });
 

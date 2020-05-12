@@ -5,7 +5,7 @@
     <h2>{{ $course->title }}</h2>
 
     @if ($purchased_course)
-        Rating: {{ $course->rating }} / 5
+        Рейтинг: {{ $course->rating }} / 5
         <br />
         <b>Оцените курс:</b>
         <br />
