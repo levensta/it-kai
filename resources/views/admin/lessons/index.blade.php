@@ -33,7 +33,7 @@
 
                         <th>@lang('global.lessons.fields.course')</th>
                         <th>@lang('global.lessons.fields.title')</th>
-                        <th>@lang('global.lessons.fields.position')</th>
+                        <!-- <th>@lang('global.lessons.fields.position')</th> -->
                         <th>@lang('global.lessons.fields.free-lesson')</th>
                         <th>@lang('global.lessons.fields.published')</th>
                         @if( request('show_deleted') == 1 )
@@ -54,7 +54,7 @@
 
                                 <td>{{ $lesson->course->title or '' }}</td>
                                 <td>{{ $lesson->title }}</td>
-                                <td>{{ $lesson->position }}</td>
+                                <!-- <td>{{ $lesson->position }}</td> -->
                                 <td>{{ Form::checkbox("free_lesson", 1, $lesson->free_lesson == 1 ? true : false, ["disabled"]) }}</td>
                                 <td>{{ Form::checkbox("published", 1, $lesson->published == 1 ? true : false, ["disabled"]) }}</td>
                                 @if( request('show_deleted') == 1 )

@@ -36,10 +36,10 @@
                             <th>@lang('global.lessons.fields.full-text')</th>
                             <td>{!! $lesson->full_text !!}</td>
                         </tr>
-                        <tr>
+                        <!-- <tr>
                             <th>@lang('global.lessons.fields.position')</th>
                             <td>{{ $lesson->position }}</td>
-                        </tr>
+                        </tr> -->
                         <tr>
                             <th>@lang('global.lessons.fields.downloadable-files')</th>
                             <td> @foreach($lesson->getMedia('downloadable_files') as $media)
@@ -61,7 +61,7 @@
             </div><!-- Nav tabs -->
 <ul class="nav nav-tabs" role="tablist">
     
-<li role="presentation" class="active"><a href="#tests" aria-controls="tests" role="tab" data-toggle="tab">Tests</a></li>
+<li role="presentation" class="active"><a href="#tests" aria-controls="tests" role="tab" data-toggle="tab">Тесты</a></li>
 </ul>
 
 <!-- Tab panes -->
@@ -72,16 +72,16 @@
     <thead>
         <tr>
             <th>@lang('global.tests.fields.course')</th>
-                        <th>@lang('global.tests.fields.lesson')</th>
-                        <th>@lang('global.tests.fields.title')</th>
-                        <th>@lang('global.tests.fields.description')</th>
-                        <th>@lang('global.tests.fields.questions')</th>
-                        <th>@lang('global.tests.fields.published')</th>
-                        @if( request('show_deleted') == 1 )
-                        <th>&nbsp;</th>
-                        @else
-                        <th>&nbsp;</th>
-                        @endif
+            <th>@lang('global.tests.fields.lesson')</th>
+            <th>@lang('global.tests.fields.title')</th>
+            <th>@lang('global.tests.fields.description')</th>
+            <th>@lang('global.tests.fields.questions')</th>
+            <th>@lang('global.tests.fields.published')</th>
+            @if( request('show_deleted') == 1 )
+                <th>&nbsp;</th>
+            @else
+                <th>&nbsp;</th>
+            @endif
         </tr>
     </thead>
 

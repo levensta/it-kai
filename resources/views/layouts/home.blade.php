@@ -94,7 +94,7 @@
                         </div>
                     @else
                     <!-- Button trigger modal -->
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Войти</button>
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" style="float: right">Войти</button>
                     @endif
                 </div>
             </div>

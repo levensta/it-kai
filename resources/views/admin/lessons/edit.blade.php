@@ -122,7 +122,7 @@
             <div class="row">
                 <div class="col-xs-12 form-group">
                     <!-- {!! Form::label('free_lesson', 'Free lesson', ['class' => 'control-label']) !!} -->
-                    {!! Form::hidden('free_lesson', 1) !!}
+                    {!! Form::hidden('free_lesson', 0) !!}
                     <!-- {!! Form::checkbox('free_lesson', 1, old('free_lesson'), []) !!} -->
                     <p class="help-block"></p>
                     @if($errors->has('free_lesson'))

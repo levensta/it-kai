@@ -20,9 +20,9 @@
 
         @if ($test_exists)
             <hr />
-            <h3>Test: {{ $lesson->test->title }}</h3>
+            <h3>Тест: {{ $lesson->test->title }}</h3>
             @if (!is_null($test_result))
-                <div class="alert alert-info">Your test score: {{ $test_result->test_result }}</div>
+                <div class="alert alert-info">Ваши баллы за тест: {{ $test_result->test_result }}</div>
             @else
             <form action="{{ route('lessons.test', [$lesson->slug]) }}" method="post">
                 {{ csrf_field() }}
@@ -40,7 +40,7 @@
             <hr />
         @endif
     @else
-        Пожалуйста, <a href="{{ route('courses.show', [$lesson->course->slug]) }}">вернитесь назад</a> и купите курс
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Войдите</button>, чтобы открыть доступ к курсу. <a href="{{ route('courses.show', [$lesson->course->slug]) }}">Вернуться назад.</a>
     @endif
 
     @if ($previous_lesson)

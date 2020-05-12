@@ -142,7 +142,7 @@ a:hover {
     float: right;
 }
 
-button[data-target="#exampleModal"], .logout {
+ .logout {
     float: right;
 }
 

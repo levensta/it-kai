@@ -18,7 +18,7 @@
                 <option value="4" selected>4 - Хорошо</option>
                 <option value="5">5 - Отлично!</option>
             </select>
-            <input type="submit" value="Rate" />
+            <input type="submit" value="Оценить" />
         </form>
         <hr />
     @endif
