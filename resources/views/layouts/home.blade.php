@@ -67,7 +67,7 @@
                 <div class="col-lg-9">
                     <!-- Brand and toggle get grouped for better mobile display -->
                     <div class="navbar-header">
-                        <a class="nvb-logo" href="{{ request('redirect_url', '/') }}"><img src="https://psv4.userapi.com/c856320/u31501026/docs/d17/f0550a107961/KAI-Logo.png?extra=BL1YQRsY9ECJDYvGlUPVCgECYkNresK-6okIrrtwPwXLY1zWHejj5YqtErq9OL9oipNSQ00NMwfUYKxBZyc87kRQTbjFUvXmFv5SQ-RyA58VYLid9iptMzQvvJ2vFuXBxhXC7AQX7WDLfJ5LBMiu" width="150" class="d-inline-block align-top" alt="logo"></a>
+                        <a class="nvb-logo" href="{{ request('redirect_url', '/') }}"><img src="{{URL::to('/'). '/kai_logo.png'}}" width="150" class="d-inline-block align-top" alt="logo"></a>
                         <a class="navbar-brand" href="{{ request('redirect_url', '/') }}">Computer Science<br>с КНИТУ-КАИ</a>
                     </div>
                     <!-- Collect the nav links, forms, and other content for toggling -->
