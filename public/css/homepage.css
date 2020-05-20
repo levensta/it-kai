@@ -1,6 +1,7 @@
 html, body {
     height: 100%;
     font-family: 'Montserrat', sans-serif;
+    overflow-x:hidden;
 }
 
 body {
@@ -155,7 +156,7 @@ hr {
 }
 
 .non-margin {
-    margin-bottom: 0px;
+    margin: 0px;
 }
 
 footer {

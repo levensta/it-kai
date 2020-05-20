@@ -67,7 +67,7 @@
                 <div class="col-lg-9">
                     <!-- Brand and toggle get grouped for better mobile display -->
                     <div class="navbar-header">
-                        <a class="nvb-logo" href="{{ request('redirect_url', '/') }}"><img src="{{URL::to('/'). '/kai_logo.png'}}" width="150" class="d-inline-block align-top" alt="logo"></a>
+                        <a class="nvb-logo" href="https://kai.ru"><img src="{{URL::to('/'). '/kai_logo.png'}}" width="150" class="d-inline-block align-top" alt="logo"></a>
                         <a class="navbar-brand" href="{{ request('redirect_url', '/') }}">Computer Science<br>с КНИТУ-КАИ</a>
                     </div>
                     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -94,7 +94,7 @@
                         </div>
                     @else
                     <!-- Button trigger modal -->
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" style="float: right">Войти</button>
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" style="float: right; margin: 10px;">Войти</button>
                     @endif
                 </div>
             </div>
@@ -124,16 +124,15 @@
             </div>
 
         </div>
-        <hr class="non-margin">
     </div>
     <!-- /.container -->
     <div class="footer">
 
-        <!-- Footer -->
+        <hr class="non-margin">
         <footer>
             <div class="row">
                 <div class="col-lg-12">
-                    <p class="container">Copyright &copy; Computer Science с КНИТУ-КАИ 2020</p>
+                    <p class="container">Copyright &copy; Computer Science с КНИТУ-КАИ 2020<br>Разработано студентом КИТ-КАИ в рамках дипломного проекта.</p>
                 </div>
             </div>
         </footer>
