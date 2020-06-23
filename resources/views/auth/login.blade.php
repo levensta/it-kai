@@ -72,6 +72,7 @@
                                             style="margin-right: 15px;">
                                         Войти
                                     </button>
+                                    <a href="{{ route('auth.register') }}">Зарегистрироваться</a>
                                 </div>
                             </div>
                         </form>

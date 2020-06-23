@@ -61,6 +61,7 @@ a:hover {
     color: #9d9d9d!important;
     height: 100%;
     padding-left: 25px;
+    float: left;
 }
 
 .navbar-inverse .navbar-nav {

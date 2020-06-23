@@ -28,38 +28,6 @@
 </head>
 
 <body>
-    <!-- Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Авторизация</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <form action="{{ route('auth.login') }}" method="post">
-                    {{ csrf_field() }}
-                    <div class="modal-body">
-                        <div class="form-group">
-                            <label for="exampleInputEmail1">Email адрес</label>
-                            <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                            <small id="emailHelp" class="form-text text-muted">Мы никому не передадим эту информацию</small>
-                        </div>
-                        <div class="form-group">
-                            <label for="exampleInputPassword1">Пароль</label>
-                            <input type="password" name="password" class="form-control" id="exampleInputPassword1">
-                            <small id="passwordHelp" class="form-text text-muted"><a href="{{ route('auth.register') }}">Не зарегестрированы?</a></small>
-                        </div>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
-                        <input type="submit" value="Войти" class="btn btn-primary">
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
     <!-- Navigation -->
     <nav class="navbar navbar-inverse navbar-fixed-top container" role="navigation">
         <div class="container">
@@ -70,18 +38,7 @@
                         <a class="nvb-logo" href="https://kai.ru"><img src="{{URL::to('/'). '/kai_logo.png'}}" width="150" class="d-inline-block align-top" alt="logo"></a>
                         <a class="navbar-brand" href="{{ request('redirect_url', '/') }}">Computer Science<br>с КНИТУ-КАИ</a>
                     </div>
-                    <!-- Collect the nav links, forms, and other content for toggling -->
-                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                        <ul class="nav navbar-nav">
-                            <li>
-                                <a href="#">О нас</a>
-                            </li>
-                            <li>
-                                <a href="#">Контакты</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <!-- /.navbar-collapse -->
+
                 </div>
                 <div class="col-lg-3">
                     @if (Auth::check())
@@ -94,7 +51,8 @@
                         </div>
                     @else
                     <!-- Button trigger modal -->
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" style="float: right; margin: 10px;">Войти</button>
+                        <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" style="float: right; margin: 10px;">Войти</button> -->
+                        <a href="{{ route('auth.login') }}"><button type="button" class="btn btn-primary" style="float: right; margin: 10px;">Войти</button></a>
                     @endif
                 </div>
             </div>
@@ -105,23 +63,11 @@
     <!-- Page Content -->
     <div class="container content">
 
-        <div class="row">
+        <div class="row justify-content-center">
 
-            <div class="col-md-3">
+            @yield('sidebar')
 
-                @yield('sidebar')
-
-            </div>
-
-            <div class="col-md-9">
-
-                <div class="row">
-
-                    @yield('main')
-
-                </div>
-
-            </div>
+            @yield('main')
 
         </div>
     </div>
@@ -147,5 +93,8 @@
     <script src="/js/bootstrap.min.js"></script>
 
 </body>
-
+<!--
+by @hghsergor,
+Sergey Gorbachev
+-->
 </html>
